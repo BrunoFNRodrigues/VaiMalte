@@ -18,15 +18,19 @@ public class Caixa {
 	}
 	
 	public int fazTotal(Carrinho car) {
-		Produto produto = null;
 		int res = 0;
+		int total = 0;
 		for (Pedido x: car.getPedidos()) {
-			produto = x.getProduto();
-			res = (int) (produto.getPreco() * x.getQuantidade()* this.desconto.get(produto.getCodigo()));
-			res += res;
+			Produto produto = x.getProduto();
+			if (this.desconto.get(produto.getCodigo()) == null){
+				res = (int) (produto.getPreco() * x.getQuantidade());
+				total += res;
+			}
+			else {
+				res = (int) (produto.getPreco() * x.getQuantidade()*this.desconto.get(produto.getCodigo()));
+			}
 		}
-		return res;
+		return total;
 	}
 
 }
-
