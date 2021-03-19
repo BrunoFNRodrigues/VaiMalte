@@ -28,6 +28,16 @@ public class Testador {
 	}
 
 	public boolean testeC() {
+		int res;
+		Produto produto = new Produto(5, "Cevada", 8.00);
+		Carrinho carr = new Carrinho();
+		carr.carrinho(produto);
+		Caixa caixa = new Caixa();
+		caixa.promocao(produto, produto.getCodigo());
+		res = caixa.fazTotal(carr);
+		if (res == 7) {
+			return true;
+		}
 	    return false;
 	}
 
