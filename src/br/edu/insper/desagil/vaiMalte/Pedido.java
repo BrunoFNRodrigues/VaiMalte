@@ -17,10 +17,8 @@ public class Pedido {
 		return produto;
 	}
 	
-	public void incremento(Produto produto) {
-		if (Carrinho.getPedidos().contains(produto)) {
+	public void incremento() {
 			this.quantidade+=1;
-		}
 	}
 	
 	public double total(Produto produto) {
