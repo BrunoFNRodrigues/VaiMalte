@@ -3,12 +3,12 @@ package br.edu.insper.desagil.vaiMalte;
 public class Testador {
 	public boolean testeA() {
 		int res;
-		Produto produto = new Produto(5, "Cevada", 8.00);
+		Produto produto = new Produto(0, null, 0);
 		Carrinho carr = new Carrinho();
 		carr.carrinho(produto);
 		Caixa caixa = new Caixa();
 		res = caixa.fazTotal(carr);
-		if (res == 8) {
+		if (res == 0) {
 			return true;
 		}
 	    return false;
