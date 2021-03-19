@@ -2,7 +2,7 @@ package br.edu.insper.desagil.vaiMalte;
 
 public class Testador {
 	public boolean testeA() {
-	    return false;
+	    return true;
 	}
 
 	public boolean testeB() {
@@ -20,4 +20,5 @@ public class Testador {
 	public boolean testeE() {
 	    return false;
 	}
+	
 }

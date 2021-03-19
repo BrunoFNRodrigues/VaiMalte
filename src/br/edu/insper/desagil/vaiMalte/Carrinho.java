@@ -17,7 +17,7 @@ public class Carrinho {
 	
 	public void carrinho(Produto produto) {
 		if (pedidos.contains(produto)) {
-			Pedido pedido = null;
+			Pedido pedido =new Pedido(produto);
 			pedido.incremento();			
 		}
 		else {

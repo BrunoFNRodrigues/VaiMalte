@@ -5,14 +5,10 @@ import java.util.Map;
 
 public class Caixa {
 	private Map<Integer, Integer> desconto;
-	private int codigo;
-	private Produto produto;
 	
-	public Carrinho(int codigo, Produto produto) {
+	public Caixa() {
 		super();
 		this.desconto = new HashMap<>();
-		this.codigo = codigo;
-		this.produto = produto;
 	}
 	
 	public void promocao(Produto produto, int codigo) {
@@ -24,11 +20,13 @@ public class Caixa {
 	public int fazTotal(Carrinho car) {
 		Produto produto = null;
 		int res = 0;
-		for (Pedido x: car) {
-			produto = x.getProduto()
-			res = produto.getPreco() * x.getContidade
+		for (Pedido x: car.getPedidos()) {
+			produto = x.getProduto();
+			res = (int) (produto.getPreco() * x.getQuantidade()* this.desconto.get(produto.getCodigo()));
 			res += res;
 		}
 		return res;
 	}
+
 }
+
