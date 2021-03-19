@@ -33,7 +33,7 @@ public class Testador {
 		Carrinho carr = new Carrinho();
 		carr.carrinho(produto);
 		Caixa caixa = new Caixa();
-		caixa.promocao(produto, produto.getCodigo());
+		caixa.promocao(produto, 10);
 		res = caixa.fazTotal(carr);
 		if (res == 7) {
 			return true;
