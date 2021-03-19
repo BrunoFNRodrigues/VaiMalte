@@ -15,6 +15,15 @@ public class Testador {
 	}
 
 	public boolean testeB() {
+		int res;
+		Produto produto = new Produto(5, "Cevada", 8.00);
+		Carrinho carr = new Carrinho();
+		carr.carrinho(produto);
+		Caixa caixa = new Caixa();
+		res = caixa.fazTotal(carr);
+		if (res == 8) {
+			return true;
+		}
 	    return false;
 	}
 
