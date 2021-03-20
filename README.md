@@ -1,4 +1,4 @@
 # VaiMalte
 
-Bruno Freitas do Nascimento Rodrigues
+Bruno Freitas do Nascimento Rodrigues n\
 Keiya Nishio
