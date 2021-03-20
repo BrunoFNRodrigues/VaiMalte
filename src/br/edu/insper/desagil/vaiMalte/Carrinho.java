@@ -12,11 +12,11 @@ public class Carrinho {
 	}
 
 	public List<Pedido> getPedidos() {
-		return pedidos;
+		return this.pedidos;
 	}
 	
 	public void carrinho(Produto produto) {
-		if (pedidos.contains(produto)) {
+		if (this.pedidos.contains(produto)) {
 			Pedido pedido =new Pedido(produto);
 			pedido.incremento();			
 		}
