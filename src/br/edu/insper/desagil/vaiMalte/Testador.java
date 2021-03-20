@@ -42,6 +42,19 @@ public class Testador {
 	}
 
 	public boolean testeD() {
+		int res;
+		Produto produto = new Produto(5, "Cevada", 8.00);
+		Produto produto2 = new Produto(6, "Malte", 12.20);
+		Carrinho carr = new Carrinho();
+		carr.carrinho(produto);
+		carr.carrinho(produto2);
+		carr.carrinho(produto2);
+		Caixa caixa = new Caixa();
+		caixa.promocao(produto, 10);
+		res = caixa.fazTotal(carr);
+		if (res == 31) {
+			return true;
+		}
 	    return false;
 	}
 
